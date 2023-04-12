@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  display: flex;
+}
+
+.buttons{
+  justify-content: space-between;
+  background-color: blue;
+  width: 100%;
+  color: #61dafb;
 }
 
 .App-logo {

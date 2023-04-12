@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+  justify-content: space-around;
+  height: 300px;
+}
+header{
+  text-align: center;
+  color: blue;
+}
+.buttons{
+  background-color: blue;
+  width: 100%;
+  margin-top: 2rem;
+  height: 50px;
+}
+
+.button{
+  margin-left: 2rem;
+  margin-top: 10px;
+}
+.cartwid{
+  height: 100px;
+  width: 100px;
+}
+
+.cart{
+  height: 85px;
+  width: 85px;
+}
+
+.greeting{
+  color: blue;
+}
