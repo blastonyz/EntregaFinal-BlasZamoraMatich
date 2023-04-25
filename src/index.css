@@ -16,6 +16,7 @@ code {
   display: flex;
   justify-content: space-around;
   height: 300px;
+  width: 100%;
 }
 header{
   text-align: center;
@@ -43,5 +44,24 @@ header{
 }
 
 .greeting{
+  margin-top: 10rem;
+ 
   color: blue;
+}
+.Lista{
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content:normal;
+}
+.CardItem{
+  width: 350px;
+  height: 450px;
+  margin: 1rem;
+  
+}
+
+.ItemImg{
+  width: 250px;
+  height: 300px;
 }
