@@ -12,26 +12,15 @@ code {
     monospace;
 }
 
-.App {
-  display: flex;
-  justify-content: space-around;
-  height: 300px;
-  width: 100%;
-}
-header{
-  text-align: center;
-  color: blue;
-}
 .buttons{
   background-color: blue;
   width: 100%;
   margin-top: 2rem;
   height: 50px;
 }
-
-.button{
-  margin-left: 2rem;
-  margin-top: 10px;
+.greeting{
+  background-image: url('../public/images/tec.jpg');
+  background-size: contain;
 }
 .cartwid{
   height: 100px;
@@ -43,25 +32,3 @@ header{
   width: 85px;
 }
 
-.greeting{
-  margin-top: 10rem;
- 
-  color: blue;
-}
-.Lista{
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-content:normal;
-}
-.CardItem{
-  width: 350px;
-  height: 450px;
-  margin: 1rem;
-  
-}
-
-.ItemImg{
-  width: 250px;
-  height: 300px;
-}
