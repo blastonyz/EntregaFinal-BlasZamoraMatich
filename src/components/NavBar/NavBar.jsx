@@ -8,9 +8,9 @@ export const NavBar = () => {
           <h3>e-comerce</h3>
         </Link>
     <div className='categorias'>
-      <NavLink to={'/categoria/belleza'}className={({isActive})=> isActive?'ActiveOption':'Option'}>  Belleza   </NavLink>
-      <NavLink to={'/categoria/oficios'}className={({isActive})=> isActive?'ActiveOption':'Option'}>Oficios</NavLink>
-      <NavLink to={'/categoria/tecnologia'}className={({isActive})=> isActive?'ActiveOption':'Option'}>Tecnologia</NavLink>
+      <NavLink to={'/categoria/belleza'} className={({isActive})=> isActive?'ActiveOption':'Option'}>Belleza</NavLink>
+      <NavLink to={'/categoria/oficios'} className={({isActive})=> isActive?'ActiveOption':'Option'}>Oficios</NavLink>
+      <NavLink to={'/categoria/tecnologia'} className={({isActive})=> isActive?'ActiveOption':'Option'}>Tecnologia</NavLink>
     </div>
     <CartWidget/>
 

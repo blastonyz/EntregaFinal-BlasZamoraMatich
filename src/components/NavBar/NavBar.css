@@ -1,17 +1,9 @@
 .categorias{
-    background-color:rgb(19, 126, 168);
+    background-color:rgb(255, 255, 255);
     width: 100%;
     color: #61dafb;
     text-align: center;
     justify-content: space-between;
-    flex-direction: row;
+    
   }
   
-.option{
-    text-decoration: dashed;
-    width: auto;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 5px;
-    border-radius:5px ;
-}

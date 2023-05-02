@@ -34,7 +34,11 @@ export const getProductosId = (ProductId) =>{
 export const getProductosCategoria = (categoriaId) =>{
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(productos.find(produc=>produc.categoria === categoriaId))
+            const filteredProducts = productos.filter((item)=> item.categoria === categoriaId)
+            console.log(categoriaId)
+  resolve(filteredProducts)
         }, 500);
     })
 }
+
+            

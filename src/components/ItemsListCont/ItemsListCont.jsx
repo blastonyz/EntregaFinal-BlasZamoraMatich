@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState,useEffect } from 'react'
 import { getProductos,getProductosCategoria } from '../../asyncMock'
 import { ItemList } from '../ItemList/ItemList'
@@ -10,7 +9,7 @@ const  [productos,setProductos] = useState([])
 
         useEffect(() => {
 
-          const asyncFunc = categoriaId?getProductosCategoria:getProductos
+          const asyncFunc = categoriaId ? getProductosCategoria: getProductos
           
                 asyncFunc(categoriaId)
                 .then(response =>{

@@ -4,7 +4,9 @@
     flex-wrap: wrap;
     align-content:normal;
     justify-content: space-between;
-    
+    margin: auto;
+    width:auto;
+    height: auto;  
   }
   
   

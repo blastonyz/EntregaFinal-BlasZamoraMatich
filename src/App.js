@@ -12,6 +12,7 @@ function App() {
       <MainHeader/>
       <div className="App">
       <BrowserRouter>
+      <div>
       <NavBar/>
       <Routes>
         <Route path='/' element={<ItemsListCont/>} />
@@ -19,6 +20,7 @@ function App() {
         <Route path='item/:itemId' element={<ItemDetailContainer/>} />
         <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
       </Routes>
+      </div>
       </BrowserRouter>
       </div>
     </div>

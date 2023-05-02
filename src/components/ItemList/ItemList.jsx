@@ -1,6 +1,7 @@
 import { Item } from "../Item/Item";
 import './ItemList.css'
 
+
 export const ItemList = ({productos}) => {
     return(
         <div className="Lista">
