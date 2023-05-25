@@ -5,6 +5,7 @@ import { ItemsListCont } from './components/ItemsListCont/ItemsListCont';
 import './App.css'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { CartProvider } from './components/CartContext/CartContext';
 
 function App() {
   return (
@@ -12,15 +13,18 @@ function App() {
       <MainHeader/>
       <div className="App">
       <BrowserRouter>
+      <CartProvider>
       <div>
       <NavBar/>
       <Routes>
         <Route path='/' element={<ItemsListCont/>} />
         <Route path='categoria/:categoriaId' element={<ItemsListCont/>} />
         <Route path='item/:itemId' element={<ItemDetailContainer/>} />
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
       </Routes>
       </div>
+      </CartProvider>
       </BrowserRouter>
       </div>
     </div>
@@ -30,9 +34,3 @@ function App() {
 export default App;
 
 
-/*<CartWidget/>
-      
-<ItemsListCont/>
-<ItemCount initial={1} stock={10} onAdd={(cantidad)=> console.log("cantidad agregada",cantidad)}/>
-import { CartWidget } from './components/CartWidget/CartWidget';
-import { ItemCount } from './components/ItemCount/ItemCount';*/
