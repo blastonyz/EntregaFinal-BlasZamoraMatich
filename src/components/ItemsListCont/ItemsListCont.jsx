@@ -3,10 +3,13 @@ import { ItemList } from '../ItemList/ItemList'
 import {useParams} from 'react-router-dom'
 import {getDocs,collection,query,where} from 'firebase/firestore'
 import {db} from '../../services/firebaseConfig'
+import React from 'react'
+import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer'
+
 
 export const ItemsListCont = ({greeting}) => {
     const  [productos,setProductos] = useState([])
-    const  [loading,setLoading] = useState(true) 
+    const  [loading,setLoading] = useState(false) 
       
     const {categoriaId} = useParams() 
 
@@ -14,8 +17,7 @@ export const ItemsListCont = ({greeting}) => {
 
           setLoading(true)
          
-          const collectionRef = categoriaId
-          ?query(collection(db,'productos'),where('categoria','==',categoriaId)): collection(db,'productos')
+          const collectionRef = categoriaId?query(collection(db,'Items'),where('categoria','==',categoriaId)): collection(db,'Items')
 
           getDocs(collectionRef)
           .then(response => {
@@ -35,11 +37,13 @@ export const ItemsListCont = ({greeting}) => {
         
         
   return (
+    <React.Fragment>
     <div className='greeting'>
-        <h1>
-            {greeting}
-        </h1>
-        <ItemList productos={productos}/>
+      {loading?<h3>Loading...</h3>:
+       
+        <ItemList productos={productos}/>}
     </div>
+    </React.Fragment>
   )
 }
+

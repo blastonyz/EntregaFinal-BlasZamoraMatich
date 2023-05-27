@@ -1,9 +1,9 @@
 import { useState,useEffect } from "react";
-import { getProductosId } from "../../asyncMock";
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";
 import {doc,getDoc} from "firebase/firestore"
 import {db} from "../../services/firebaseConfig"
+import React from "react";
 
  export const ItemDetailContainer = ()=> {
     const [productos,setProductos] = useState(null)
@@ -14,7 +14,7 @@ import {db} from "../../services/firebaseConfig"
      useEffect(()=> {
         setLoading(true)
 
-        const docRef = doc(db,'productos',itemId)
+        const docRef = doc(db,'Items',itemId)
 
         getDoc(docRef)
         
@@ -31,9 +31,10 @@ import {db} from "../../services/firebaseConfig"
      },[itemId])
 
      return(
+       <React.Fragment>
         <div className="ItemDetailContainer">
-            <ItemDetail{...productos}/>
-        </div>
+        {loading?<h3>Loading...</h3>:<ItemDetail{...productos}/>}
+        </div> 
+       </React.Fragment>
      )
 }
-
