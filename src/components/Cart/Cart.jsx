@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import CartItem from "../CartItem/CartItem"
 import { Link } from "react-router-dom";
 
-const Cart = () => {
+export const Cart = () => {
     const {cart,cleanCart,cantidadTotal,total} = useContext(CartContext)
 
     if(cantidadTotal === 0){
