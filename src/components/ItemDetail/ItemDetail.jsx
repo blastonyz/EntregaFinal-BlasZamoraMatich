@@ -2,7 +2,8 @@ import './ItemDetail.css'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../CartContext/CartContext'
+import { CartContext } from '../../context/CartContext'
+import { CartProvider } from '../../context/CartContext'
 
 export const ItemDetail =  ({id,nombre,precio,categoria,img,descripcion,checkaout,stock}) => {   const [cantidadAdded,setCantidadAdded] = useState(0)
 
