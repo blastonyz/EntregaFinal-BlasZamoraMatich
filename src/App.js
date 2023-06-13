@@ -13,8 +13,8 @@ function App() {
     <div>  
       <MainHeader/>
       <div className="App">
-      <BrowserRouter>
       <CartProvider>
+      <BrowserRouter>
       <div>
       <NavBar/>
       <Routes>
@@ -25,8 +25,8 @@ function App() {
         <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
       </Routes>
       </div>
-      </CartProvider>
       </BrowserRouter>
+      </CartProvider>
       </div>
     </div>
   );

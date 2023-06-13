@@ -1,13 +1,12 @@
-import { useState,useEffect } from 'react'
+import React,{ useState,useEffect } from 'react'
 import { ItemList } from '../ItemList/ItemList'
 import {useParams} from 'react-router-dom'
 import {getDocs,collection,query,where} from 'firebase/firestore'
 import {db} from '../../services/firebaseConfig'
-import React from 'react'
-import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer'
 
 
-export const ItemsListCont = ({greeting}) => {
+export const ItemsListCont = () => {
+  
     const  [productos,setProductos] = useState([])
     const  [loading,setLoading] = useState(false) 
       
@@ -21,7 +20,7 @@ export const ItemsListCont = ({greeting}) => {
 
           getDocs(collectionRef)
           .then(response => {
-            const productosAdapted = response.doc.map(doc=>{const data = doc.data()
+            const productosAdapted = response.docs.map(doc=>{const data = doc.data()
               return{id:doc.id,...data}
             })
             setProductos(productosAdapted)
@@ -33,7 +32,7 @@ export const ItemsListCont = ({greeting}) => {
           })
         }
       
-        ,[itemId])
+        ,[categoriaId])
         
         
   return (
